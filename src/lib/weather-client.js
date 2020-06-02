@@ -8,6 +8,7 @@ const url = require("url");
 // -------------1
 class OpenWeatherClient {
   constructor(apiKey) {
+    // this corresponds to the data inside the config.js which is the api key
     this.apiKey = apiKey;
     this.baseUrl = "http://api.openweathermap.org/data/2.5/";
   }
@@ -92,7 +93,7 @@ class OpenWeatherClient {
     // api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}
 
     this.baseUrl =
-      "http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=c641412b61c71dc990c82502e16befa0";
+    this.baseUrl = "http://api.openweathermap.org/data/2.5/";
   }
   //   NOW BUILD THE url
   //   if you forgot about getter and settle check that again

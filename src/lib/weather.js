@@ -6,8 +6,10 @@ const OpenWeatherClient = require("./weather-client");
 //
 // __1
 const myKey = require("../../config");
+// this corresponds to the data inside the config.js which is the api key
 // you can write js or let it at config, is also fine.
 const API_KEY = myKey;
+// the API_KEY  is now myKey and what it contains.
 //
 //----------------------------------
 // pass the key here once you are done with the functions inside the weather-client.js
