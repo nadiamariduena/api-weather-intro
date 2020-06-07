@@ -11,6 +11,16 @@ const myKey = require("../../config");
 const API_KEY = myKey;
 // the API_KEY  is now myKey and what it contains.
 //
+function formatData(data) {
+  const result = `It is now ${data.main.temp}\u00B0C in ${data.name}, ${
+    data.sys.country
+  } 
+  Today's weather ${data.weather
+    .map((condition) => condition.description)
+    .join(", ")} `;
+  return result;
+}
+
 //----------------------------------
 // pass the key here once you are done with the functions inside the weather-client.js
 // and that is of course imported on top in line 1
@@ -23,4 +33,6 @@ module.exports = async function weather(city, country) {
   //   console.log(client);
   const currentData = await client.getWeather(city, country);
   console.log(currentData);
+  //
+  return formatData(currentData);
 };
